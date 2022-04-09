@@ -11,8 +11,8 @@ function run() {
 				toolbarSvgIcon: icon24,
 				librarySvgIcon: icon48,
 				onClick: () => {
-					miro.board.ui.openLibrary('library.html', {title: 'Library'})
-					miro.board.ui.openBottomPanel('bottomPanel.html', {title: 'Bottom Panel'})
+					miro.board.ui.openLibrary('./library.html', {title: 'Library'})
+					miro.board.ui.openBottomPanel('./bottomPanel.html', {title: 'Bottom Panel'})
 				},
 			},
 		},
