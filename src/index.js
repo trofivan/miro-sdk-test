@@ -1,7 +1,7 @@
 const ROOT_PATH = 'https://trofivan.github.io/miro-sdk-test'
 const SVG_ICON = `
 	<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-		<circle cx="50%" cy="50%" r="12" fill="black"/>
+		<circle cx="50%" cy="50%" r="12" fill="currentColor" />
 	</svg>
 `
 const TITLE = 'SDK Test Plugin'
