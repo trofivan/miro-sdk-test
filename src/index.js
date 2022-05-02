@@ -4,27 +4,18 @@ const SVG_ICON = `
 		<circle cx="50%" cy="50%" r="12" fill="currentColor" />
 	</svg>
 `
-const TITLE = 'SDK Test Plugin'
-
-const handleClick = () => {
-	miro.board.ui.openLibrary(`${ROOT_PATH}/library.html`, {title: 'Library'})
-	miro.board.ui.openBottomPanel(`${ROOT_PATH}/bottomPanel.html`, {title: 'Bottom Panel'})
-}
 
 function run() {
 	miro.initialize({
 		extensionPoints: {
-			toolbar: {
-				title: TITLE,
-				toolbarSvgIcon: SVG_ICON,
-				librarySvgIcon: SVG_ICON,
-				onClick: handleClick,
-			},
 			bottomBar: {
-				title: TITLE,
+				title: 'Open NavStack',
 				svgIcon: SVG_ICON,
 				positionPriority: 1,
-				onClick: handleClick,
+				onClick: () => {
+					miro.board.ui.openLeftSidebar(`${ROOT_PATH}/bottomPanel.html`, {title: 'LeftSidebar'})
+					miro.board.ui.openLeftSidebar(`${ROOT_PATH}/bottomPanel.html`, {placement: 'LeftApps'})
+				},
 			},
 		},
 	})
