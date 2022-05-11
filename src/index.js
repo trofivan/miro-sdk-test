@@ -9,12 +9,13 @@ function run() {
 	miro.initialize({
 		extensionPoints: {
 			bottomBar: {
-				title: 'Open NavStack',
+				title: 'Open Library',
 				svgIcon: SVG_ICON,
 				positionPriority: 1,
 				onClick: () => {
-					miro.board.ui.openLeftSidebar(`${ROOT_PATH}/bottomPanel.html`, {title: 'LeftSidebar'})
-					miro.board.ui.openLeftSidebar(`${ROOT_PATH}/bottomPanel.html`, {placement: 'LeftApps'})
+					// miro.board.ui.openLeftSidebar(`${ROOT_PATH}/bottomPanel.html`, {title: 'LeftSidebar'})
+					// miro.board.ui.openLeftSidebar(`${ROOT_PATH}/bottomPanel.html`, {placement: 'LeftApps'})
+					miro.board.ui.openLibrary(`${ROOT_PATH}/bottomPanel.html`, {title: 'External PLugin'})
 				},
 			},
 		},
